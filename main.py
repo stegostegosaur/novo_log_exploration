@@ -3,8 +3,27 @@ import os
 from os import listdir
 from os.path import isfile, join
 
-path = ''
-excluded_users = []
+path = input("Please enter the path to the directory where you store the log-files you wish to analyse!\n")
+
+excluded_users = input("Removing participants?\n\n"
+                       
+                       "If you wish to keep the default subset of excluded users for the 'I can speak 2021' "
+                       "experiment, type 'default'\n"
+                       
+                       "If you do not wish to exclude users, type 'none'\n"
+                       
+                       "Otherwise, write the serial number of participants to be removed "
+                       "(type the numbers only, separated with a ',')\n")
+
+if excluded_users == 'default':
+    excluded_users = ['wiskar14', 'wiskar23', 'wiskar26', 'wiskar28', 'wiskar30',
+                      'wiskar36', 'wiskar57', 'wiskar63', 'wiskar64']
+
+elif excluded_users == 'none':
+    excluded_users = []
+
+else:
+    excluded_users = ['wiskar' + i for i in re.findall(r'\d+', excluded_users)]
 
 
 # function that helps process log files in ascending order
