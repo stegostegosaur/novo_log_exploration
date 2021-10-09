@@ -3,10 +3,8 @@ import os
 from os import listdir
 from os.path import isfile, join
 
-path = input("Please enter the path to the directory where you store the log-files you wish to analyse!\n")
-
-excluded_users = ['wiskar14', 'wiskar23', 'wiskar26', 'wiskar28', 'wiskar30',
-                  'wiskar36', 'wiskar57', 'wiskar63', 'wiskar64']
+path = ''
+excluded_users = []
 
 
 # function that helps process log files in ascending order
