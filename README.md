@@ -1,7 +1,7 @@
 # novo_log_exploration
 Exploratory analysis and descriptive statistics tasks conducted on the Novolanguage log-files of the PhD project called 'I can speak'. The following files are contained in this repository:
 
-The file 'runPipeline.py' runs the analysis: it takes a user input for the directory where the log-files are located, and returns csv tables and barplots on the data. The analyses involved are defined in the followig scripts:
+The analysis can be run with the script 'runPipeline.py'. Itt takes two user inputs: one for the directory where the log-files are located, and an optional list for participants to be removed. After conducting the analyses, it writes the resulting csv tables and barplots in a subfolder called 'Result of Analysis' inside the directory entered above.
 
 • main.py: contains functions for pre-processing the files, such as converting log files into JSON format and removing empty log files.
 
